@@ -20,5 +20,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/parties/add', [App\Http\Controllers\PagesController::class, 'AddPartyPage'])->name('AddPartyPage');
+Route::get('/parties/add', [App\Http\Controllers\PartyController::class, 'PartyForm'])->name('AddPartyPage');
+Route::post('/parties/add', [App\Http\Controllers\PartyController::class, 'AddParty'])->name('AddParty');
 

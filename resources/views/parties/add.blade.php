@@ -13,6 +13,26 @@
 
 
                         <div class="card-body">
+                            @if(session('status'))
+                            <div class="alert alert-success alert-dismissible fade show text-center font-weight-bold small"
+                                role="alert">
+                                {{ session('status') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
+
+                        {{-- Error Alert --}}
+                        @if(session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show text-center font-weight-bold small"
+                                role="alert">
+                                {{ session('error') }}
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                        @endif
 
 
                             <div class="row justify-content-center">
@@ -22,7 +42,7 @@
                                 <hr>
                             </div>
 
-                            <form method="POST" action="">
+                            <form method="POST" action="\parties\add">
                                 @csrf
 
                                 <div class="form-group row">
@@ -30,7 +50,7 @@
                                         class="col-md-4 col-form-label text-md-right">{{ __('Party Name') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="name" type="text"
+                                        <input id="partyName" type="text"
                                             class="form-control @error('name') is-invalid @enderror" name="partyName"
                                             value="{{ old('partyName') }}" autocomplete="partyName"
                                             autofocus>
@@ -44,16 +64,16 @@
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="membership_cost"
+                                    <label for="membershipCost"
                                         class="col-md-4 col-form-label text-md-right">{{ __('Membership Cost') }}</label>
 
                                     <div class="col-md-6">
                                         <input id="reg_no" type="number"
-                                            class="form-control @error('membership_cost') is-invalid @enderror"
-                                            name="reg_no" value="{{ old('reg_no') }}"
-                                            autocomplete="membership_cost">
+                                            class="form-control @error('membershipCost') is-invalid @enderror"
+                                            name="membershipCost" value="{{ old('reg_no') }}"
+                                            autocomplete="membershipCost">
 
-                                        @error('membership_cost')
+                                        @error('membershipCost')
                                             <span class="invalid-feedback" role="alert">
                                                 <strong>{{ $message }}</strong>
                                             </span>
