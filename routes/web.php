@@ -25,4 +25,4 @@ Route::get('/parties/add', [App\Http\Controllers\PartyController::class, 'PartyF
 Route::post('/parties/add', [App\Http\Controllers\PartyController::class, 'AddParty'])->name('AddParty');
 
 Route::get('/members/add', [App\Http\Controllers\MemberController::class, 'MemberForm'])->name('MemberForm');
-
+Route::post('/members/add', [App\Http\Controllers\MemberController::class, 'AddMember'])->name('AddMember');

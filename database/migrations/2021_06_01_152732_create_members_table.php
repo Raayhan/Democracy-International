@@ -17,6 +17,8 @@ class CreateMembersTable extends Migration
             $table->id();
             $table->string('memberName');
             $table->integer('memberAge');
+            $table->string('memberParty');
+
             $table->timestamps();
         });
     }
