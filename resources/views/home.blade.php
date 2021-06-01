@@ -17,7 +17,7 @@
                               <p class="card-text">
                                 Add a new party to the system.
                               </p>
-                              <button type="button" class="btn btn-unique btn-sm">Go</button>
+                              <button onclick="window.location.href='/parties/add'" type="button" class="btn btn-unique btn-sm">Go</button>
                             </div>
                           </div>
                       </div>
@@ -28,7 +28,7 @@
                               <p class="card-text">
                                 Add a new member to a party.
                               </p>
-                              <button type="button" class="btn btn-unique btn-sm">Go</button>
+                              <button onclick="window.location.href='/home/addMembers'" type="button" class="btn btn-unique btn-sm">Go</button>
                             </div>
                           </div>
                       </div>
