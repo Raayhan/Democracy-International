@@ -28,7 +28,7 @@
                               <p class="card-text">
                                 Add a new member to a party.
                               </p>
-                              <button onclick="window.location.href='/home/addMembers'" type="button" class="btn btn-unique btn-sm">Go</button>
+                              <button onclick="window.location.href='/members/add'" type="button" class="btn btn-unique btn-sm">Go</button>
                             </div>
                           </div>
                       </div>
