@@ -14,25 +14,23 @@
 
                         <div class="card-body">
                             @if(session('status'))
-                            <div class="alert alert-success alert-dismissible fade show text-center font-weight-bold small"
-                                role="alert">
+                            <div class="alert alert-success alert-dismissible fade show text-center font-weight-bold small" role="alert">
                                 {{ session('status') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                        @endif
+                            @endif
 
-                        {{-- Error Alert --}}
-                        @if(session('error'))
-                            <div class="alert alert-danger alert-dismissible fade show text-center font-weight-bold small"
-                                role="alert">
+                            {{-- Error Alert --}}
+                            @if(session('error'))
+                            <div class="alert alert-danger alert-dismissible fade show text-center font-weight-bold small" role="alert">
                                 {{ session('error') }}
                                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                                     <span aria-hidden="true">&times;</span>
                                 </button>
                             </div>
-                        @endif
+                            @endif
 
 
                             <div class="row justify-content-center">
@@ -46,65 +44,55 @@
                                 @csrf
 
                                 <div class="form-group row">
-                                    <label for="memberName"
-                                        class="col-md-4 col-form-label text-md-right">{{ __('Member Name') }}</label>
+                                    <label for="memberName" class="col-md-4 col-form-label text-md-right">{{ __('Member Name') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="memberName" type="text"
-                                            class="form-control @error('name') is-invalid @enderror" name="memberName"
-                                            value="{{ old('memberName') }}" autocomplete="memberName"
-                                            autofocus>
+                                        <input id="memberName" type="text" class="form-control @error('name') is-invalid @enderror" name="memberName" value="{{ old('memberName') }}" autocomplete="memberName" autofocus>
 
                                         @error('memberName')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div>
                                 </div>
 
                                 <div class="form-group row">
-                                    <label for="memberAge"
-                                        class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
+                                    <label for="memberAge" class="col-md-4 col-form-label text-md-right">{{ __('Age') }}</label>
 
                                     <div class="col-md-6">
-                                        <input id="memberAge" type="number"
-                                            class="form-control @error('memberAge') is-invalid @enderror"
-                                            name="memberAge" value="{{ old('age') }}"
-                                            autocomplete="memberAge">
+                                        <input id="memberAge" type="number" class="form-control @error('memberAge') is-invalid @enderror" name="memberAge" value="{{ old('age') }}" autocomplete="memberAge">
 
                                         @error('memberAge')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div>
                                 </div>
                                 <div class="form-group row">
-                                    <label for="memberParty"
-                                        class="col-md-4 col-form-label text-md-right">{{ __('Party') }}</label>
+                                    <label for="memberParty" class="col-md-4 col-form-label text-md-right">{{ __('Party') }}</label>
 
                                     <div class="col-md-6">
-                                        <select name="memberParty"
-                                            class="form-control  @error('party') is-invalid @enderror"
-                                            id="partyName">
+                                        <select name="memberParty" class="form-control  @error('party') is-invalid @enderror" id="partyName">
                                             <option value="" disabled selected>Select Party</option>
                                             @foreach($parties as $party)
-                                                <option value="{{ $party->partyName }}">
-                                                    {{ $party->partyName }}</option>
+                                            <option value="{{ $party->partyName }}">
+                                                {{ $party->partyName }}
+                                            </option>
                                             @endforeach
 
 
                                         </select>
 
                                         @error('memberParty')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
                                         @enderror
                                     </div>
                                 </div>
-                               
+
 
                                 <div class="form-group row mb-0">
                                     <div class="col-md-6 offset-md-4">

@@ -9,7 +9,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'DI') }} | @yield('pagetitle')</title>
- 
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}"></script>
     <!-- Fonts -->
@@ -27,13 +27,10 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light shadow-sm sticky-top"
-            style=" color:white!important; background:rgb(255, 255, 255);">
+        <nav class="navbar navbar-expand-md navbar-light shadow-sm sticky-top" style=" color:white!important; background:rgb(255, 255, 255);">
             <div class="container">
                 <a class="navbar-brand font-weight-bold" href="/">Democracy International</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="{{ __('Toggle navigation') }}">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -58,35 +55,29 @@
                         <!-- Authentication Links -->
                         @if (Auth::check())
                         <li class="nav-item dropdown">
-                            <a id="adminDropdown" class="nav-link dropdown-toggle" href="#" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                
-                                {{ Auth::guard('web')->user()->name }}  <span class="caret"></span>
+                            <a id="adminDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+
+                                {{ Auth::guard('web')->user()->name }} <span class="caret"></span>
                             </a>
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="adminDropdown">
-                                <a href="{{ route('home') }}"
-                                    class="dropdown-item">Dashboard</a>
-                                <a class="dropdown-item" href="#"
-                                    onclick="event.preventDefault();document.querySelector('#logout-form').submit();">
+                                <a href="{{ route('home') }}" class="dropdown-item">Dashboard</a>
+                                <a class="dropdown-item" href="#" onclick="event.preventDefault();document.querySelector('#logout-form').submit();">
                                     Logout
                                 </a>
-                                <form id="logout-form"
-                                    action="{{ route('logout') }}" method="post"
-                                    style="display: none;">
+                                <form id="logout-form" action="{{ route('logout') }}" method="post" style="display: none;">
                                     @csrf
                                 </form>
                             </div>
                         </li>
                         @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="/login">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link"
-                                    href="/register">Register</a>
-                            </li>
-                            @endif
-                     
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Register</a>
+                        </li>
+                        @endif
+
                     </ul>
                 </div>
             </div>
@@ -209,7 +200,7 @@
         </footer>
         <!-- Footer -->
     </div>
-    @yield('scripts')
+   
 </body>
 
 </html>

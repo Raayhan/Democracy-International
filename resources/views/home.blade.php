@@ -1,41 +1,114 @@
 @extends('layouts.app')
 @section('pagetitle', 'Dashboard')
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header text-center">{{ __('Dashboard') }}</div>
 
-                <div class="card-body">
-                  <h2 class="text-center mb-5">Welcome</h2>
-                  <div class="row">
-                      <div class="col md-6">
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">Add Party</h5>
-                              <p class="card-text">
-                                Add a new party to the system.
-                              </p>
-                              <button onclick="window.location.href='/parties/add'" type="button" class="btn btn-unique btn-sm">Go</button>
-                            </div>
-                          </div>
-                      </div>
-                      <div class="col md-6">
-                        <div class="card">
-                            <div class="card-body">
-                              <h5 class="card-title">Create Memeber</h5>
-                              <p class="card-text">
-                                Add a new member to a party.
-                              </p>
-                              <button onclick="window.location.href='/members/add'" type="button" class="btn btn-unique btn-sm">Go</button>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
+<div class="container">
+    <div class="jumbotron jumbotron-fluid" style="padding-top:20px!important;padding-bottom:20px!important;">
+        <div class="container">
+            <h1 class="text-center pt-5">Welcome Back</h1>
+            <p class="lead text-center small">Manage your dashboard</p>
+            <div class="row">
+                <div class="col-md-6 p-3">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <!-- Content -->
+                            <a href="/parties/add">
+                                <div class="text-white rounded d-flex h-100 mask  indigo darken-3">
+                                    <div class="first-content align-self-center p-3">
+                                        <h4 class="card-title">Create Party</h4>
+                                        <p class="">Add a new party to the system</p>
+                                    </div>
+                                    <div class="second-content align-self-center mx-auto text-center">
+                                        <i class="fas fa-book-reader fa-3x"></i>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Card -->
                 </div>
+                <div class="col-md-6 p-3">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <!-- Content -->
+                            <a href="/parties/all">
+                                <div class="text-white d-flex rounded h-100 mask  green darken-4">
+                                    <div class="first-content align-self-center p-3">
+                                        <h4 class="card-title">View Parties</h4>
+                                        <p class="">View all parties in the system</p>
+                                    </div>
+                                    <div class="second-content align-self-center mx-auto text-center">
+                                        <i class="fas fa-award fa-3x"></i>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+
+
+            </div>
+            <div class="row">
+                <div class="col-md-6 p-3">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <!-- Content -->
+                            <a href="/members/add">
+                                <div class="text-white rounded d-flex h-100 mask  red darken-3">
+                                    <div class="first-content align-self-center p-3">
+                                        <h4 class="card-title">Create Member</h4>
+                                        <p class="">Add a new member to the system</p>
+                                    </div>
+                                    <div class="second-content align-self-center mx-auto text-center">
+                                        <i class="fas fa-user-plus fa-3x"></i>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+                <div class="col-md-6 p-3">
+                    <!-- Card -->
+                    <div class="card">
+
+                        <div class="card-image">
+
+                            <!-- Content -->
+                            <a href="/members/view">
+                                <div class="text-white d-flex rounded h-100 mask  yellow darken-4">
+                                    <div class="first-content align-self-center p-3">
+                                        <h4 class="card-title">View Members</h4>
+                                        <p class="">View all members in the system</p>
+                                    </div>
+                                    <div class="second-content align-self-center mx-auto text-center">
+                                        <i class="fas fa-users fa-3x"></i>
+                                    </div>
+                                </div>
+                            </a>
+
+                        </div>
+                    </div>
+                    <!-- Card -->
+                </div>
+
+
             </div>
         </div>
     </div>
 </div>
+
 @endsection

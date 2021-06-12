@@ -4,10 +4,15 @@
 <div class="container py-5">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Register') }}</div>
-
-                <div class="card-body">
+            <div class="jumbotron" style="padding-top:10%;padding-bottom:10%;  margin-bottom:0px;">
+             
+                <div class="row justify-content-center" style="margin-bottom:1%;">
+                    <i class="mdb-color-text fas fa-user-plus fa-3x text-center"></i>
+                </div>
+                <div class="row justify-content-center" style="margin-bottom:5%;">
+                    <h4 class="mdb-color-text">Register</h4>
+                </div>
+                
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -63,13 +68,13 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-unique">
                                     {{ __('Register') }}
                                 </button>
                             </div>
                         </div>
                     </form>
-                </div>
+                
             </div>
         </div>
     </div>

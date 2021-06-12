@@ -8,14 +8,14 @@
             <div class="row justify-content-center">
                 <h1 class="brown-text">Democracy International</h1>
             </div>
-          
+
             <p style="margin-top:5%">Bangladesh Democratic Participation and Reform Program</p>
             <div class="row justify-content-center mb-5">
                 <button onclick="window.location.href='/login'" class="btn btn-primary">GET STARTED</button>
-               
+
             </div>
         </div>
-     
+
     </div>
 </div>
 
